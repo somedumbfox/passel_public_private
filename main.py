@@ -103,6 +103,10 @@ async def pins(ctx):
     numPins = await ctx.message.channel.pins()
     await ctx.send(ctx.message.channel.mention + " has " + str(len(numPins)) + " pins.")
 
+@client.command(name='blitz', pass_context=True)
+async def blitz(ctx):
+  await ctx.send("https://media.discordapp.net/attachments/566444861687988254/779066103761731624/Blitz.gif")
+
 # The method that takes care of pin updates in a server
 @client.event
 async def on_guild_channel_pins_update(channel, last_pin):
